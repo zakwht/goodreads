@@ -27,7 +27,7 @@ Take the numerical user ID from Goodreads, _e.g._ `139946054` from `https://www.
 ```
 
 #### Currently Reading
-[![Example](https://goodreads-six.vercel.app/goodreads?user=jonsnow)]((https://www.goodreads.com/user/show/139946054-zak))
+[![Example](https://goodreads-six.vercel.app/goodreads?user=jonsnow)](https://www.goodreads.com/user/show/139946054-zak)
 
 Alternatively, the API has a JSON endpoint:
 
