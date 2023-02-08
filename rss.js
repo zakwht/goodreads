@@ -52,6 +52,8 @@ const parse = userID => {
           profile: { name: feed.description.slice(20), link: feed.link }
         }
       }
+    } return {
+      profile: { name: feed.description.slice(20), link: feed.link }
     }
   }).catch(error => ({ error }))
 }

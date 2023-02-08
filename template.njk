@@ -37,7 +37,7 @@
       </style>
       <div class="container">
       {% if title %}
-        <img src="{{ image }}" />
+        <img src="data:image/png;base64, {{ image }}" />
         <div class="text">
           <span class="title">{{ title }}</span>
           <span class="author">{{ author }}</span>
@@ -46,7 +46,7 @@
           {% endif %}
         </div>
       {% else %}
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Goodreads_logo_-_SuperTinyIcons.svg/800px-Goodreads_logo_-_SuperTinyIcons.svg.png" />
+        <img class="logo" src="data:image/png;base64, {{ image }}" />
         <div class="text">
           <span class="error">{{ user }} has no recent updates on Goodreads</span>
         </div> 
