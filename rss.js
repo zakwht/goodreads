@@ -59,14 +59,3 @@ const parse = userID => {
 }
 
 module.exports = { getProgress, parse, getRSS }
-
-
-// explain algo: finds most recent match only!
-// edge case: you finished and reviewed a book without startign a new one , it's still "current"
-// review link will either be review or if progress update, profile link
-
-
-// https://www.goodreads.com/user/updates_rss/57158879
-// example for % completion ^^
-// https://github.com/JBornman/JBornman/blob/main/README.md
-// here is a lovely visual!
