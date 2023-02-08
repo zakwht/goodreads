@@ -1,0 +1,57 @@
+<svg width="480" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <foreignObject width="480" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          display: flex;
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          margin: 8px 0 8px 8px;
+        }
+        .container span {
+          display: block;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+          font-weight: 300;
+        }
+        img {
+          height: 80px;
+        }
+        span.author {
+          color: #999;
+          font-size: 0.9em;
+        }
+        span.page {
+          font-size: 0.9em;
+          margin-top: auto;
+          font-weight: 100;
+        }        
+        span.error {
+          max-width: 200px;
+        }
+        img.logo {
+          height: 48px;
+          margin: auto 0;
+        }
+      </style>
+      <div class="container">
+      {% if title %}
+        <img src="{{ image }}" />
+        <div class="text">
+          <span class="title">{{ title }}</span>
+          <span class="author">{{ author }}</span>
+          {% if progress %}
+          <span class="page">{{ progress }}</span>
+          {% endif %}
+        </div>
+      {% else %}
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Goodreads_logo_-_SuperTinyIcons.svg/800px-Goodreads_logo_-_SuperTinyIcons.svg.png" />
+        <div class="text">
+          <span class="error">{{ user }} has no recent updates on Goodreads</span>
+        </div> 
+      {% endif %}
+      </div>
+    </div>
+  </foreignObject>
+</svg>
