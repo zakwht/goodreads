@@ -5,7 +5,8 @@
   "main": "run.js",
   "scripts": {
     "test": "node test/test.js",
-    "start": "nodemon api.js"
+    "start": "nodemon api.js",
+    "deploy": "vercel --prod"
   },
   "author": "",
   "license": "MIT",
