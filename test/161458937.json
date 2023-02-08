@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "title": "\n    Thomas\n    is 64% done with Man's Search for Meaning\n  ",
+      "link": "https://www.goodreads.com/user/show/161458937-Thomas",
+      "pubDate": "Mon, 23 Jan 2023 10:59:31 -0800",
+      "content": "\n      <a href=\"/book/show/4069.Man_s_Search_for_Meaning\"><img align=\"right\" hspace=\"10\" alt=\"Man&#39;s Search for Meaning by Viktor E. Frankl\" title=\"Man&#39;s Search for Meaning by Viktor E. Frankl\" src=\"https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SY75_.jpg\" /></a>\n    <a href=\"/user/show/161458937-Thomas\">Thomas</a>\n    is 64% done with &lt;a href=&quot;/book/show/4069.Man_s_Search_for_Meaning&quot;&gt;Man's Search for Meaning&lt;/a&gt;.\n  ",
+      "contentSnippet": "Thomas\n    is 64% done with <a href=\"/book/show/4069.Man_s_Search_for_Meaning\">Man's Search for Meaning</a>.",
+      "guid": "UserStatus587331879",
+      "isoDate": "2023-01-23T18:59:31.000Z"
+    },
+    {
+      "title": "&lt;Friend user_id=161458937 friend_user_id=119873622 top_friend=true&gt;",
+      "pubDate": "Sat, 14 Jan 2023 16:09:38 -0800",
+      "guid": "Friend1352877154",
+      "isoDate": "2023-01-15T00:09:38.000Z"
+    },
+    {
+      "title": "\n    \n    Thomas\n        has created a challenge\n      to read 10 books in 2023.\n\n    \n  ",
+      "link": "https://www.goodreads.com/user/show/161458937-thomas-dwyre",
+      "pubDate": "Sat, 14 Jan 2023 16:08:40 -0800",
+      "content": "\n  \n    <div style = 'margin-right: 5px; float: right;'>\n      <a href=\"/challenges/11633-2023-reading-challenge\"><img src=\"https://images.gr-assets.com/challenges/1670887106p2/11633.jpg\" alt=\"11633\" /></a>\n    </div>\n  <a class=\"actionLink left\" style=\"clear: left; margin-top: 1em\" href=\"/challenges/11633-2023-reading-challenge\">Create your own 2023 Reading Challenge &raquo;</a>\n    \n    ",
+      "contentSnippet": "Create your own 2023 Reading Challenge »",
+      "guid": "UserChallenge42174620",
+      "isoDate": "2023-01-15T00:08:40.000Z"
+    }
+  ],
+  "feedUrl": "https://www.goodreads.com/user/updates_rss/161458937",
+  "image": {
+    "link": "https://www.goodreads.com/user/show/161458937-thomas-dwyre",
+    "url": "https://www.goodreads.com/images/layout/goodreads_logo_144.jpg",
+    "title": "Thomas's Updates",
+    "width": "144",
+    "height": "41"
+  },
+  "paginationLinks": {
+    "self": "https://www.goodreads.com/user/updates_rss/161458937"
+  },
+  "title": "Thomas's Updates",
+  "description": "Recent updates from Thomas",
+  "link": "https://www.goodreads.com/user/show/161458937-thomas-dwyre",
+  "language": "en-US",
+  "copyright": "Copyright (C) 2023 Goodreads Inc. All rights reserved.\n    ",
+  "lastBuildDate": "Sat, 14 Jan 2023 16:09:38 -0800",
+  "ttl": "60"
+}

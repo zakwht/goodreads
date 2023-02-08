@@ -1,0 +1,21 @@
+{
+  "items": [],
+  "feedUrl": "https://www.goodreads.com/user/updates_rss/123766200",
+  "image": {
+    "link": "https://www.goodreads.com/user/show/123766200-emma",
+    "url": "https://www.goodreads.com/images/layout/goodreads_logo_144.jpg",
+    "title": "Emma's Updates",
+    "width": "144",
+    "height": "41"
+  },
+  "paginationLinks": {
+    "self": "https://www.goodreads.com/user/updates_rss/123766200"
+  },
+  "title": "Emma's Updates",
+  "description": "Recent updates from Emma",
+  "link": "https://www.goodreads.com/user/show/123766200-emma",
+  "language": "en-US",
+  "copyright": "Copyright (C) 2023 Goodreads Inc. All rights reserved.\n    ",
+  "lastBuildDate": "Wed, 08 Feb 2023 13:06:13 -0800",
+  "ttl": "60"
+}
