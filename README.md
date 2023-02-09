@@ -23,7 +23,7 @@ Take the numerical user ID from Goodreads, _e.g._ `139946054` from `https://www.
 
 ```markdown
 ### Currently Reading
-[![Goodreads](https://goodreads-six.vercel.app/goodreads/json?user=139946054)](https://www.goodreads.com/user/show/139946054-zak)
+[![Goodreads](https://goodreads-six.vercel.app/goodreads?user=139946054)](https://www.goodreads.com/user/show/139946054-zak)
 ```
 
 #### Currently Reading
@@ -63,11 +63,11 @@ curl "https://goodreads-six.vercel.app/goodreads/json?user=139946054"
 Schema - response properties vary based on type of RSS item:
 ```TypeScript
 book: { title, author, image, link? },
-update: { date, link? }, # corresponding Goodreads update
-profile: { name, link }, # user profile
+update: { date, link? }, // corresponding Goodreads update
+profile: { name, link }, // user profile
 author?: { link, name },
 pages?: { read, total },
-progress? # a number representing percentage of book read
+progress? // a number representing percentage of book read
 ```
 
 ### Acknowledgments
