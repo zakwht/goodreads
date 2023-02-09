@@ -1,4 +1,4 @@
-# README Template
+# Goodreads Currently Reading API
 
 [![License](https://img.shields.io/github/license/zakwht/goodreads)](/LICENSE.md)
 [![Example](https://img.shields.io/badge/vercel-deployed-black)](#)
