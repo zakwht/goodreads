@@ -14,15 +14,15 @@ The program parses the most recent relevant update in a user's RSS feed to outpu
 - Node v18+ (built with 18.13.0)
 
 #### Scripts
-`start`: starts the API in watch mode, on `localhost:3000`
-`deploy`: publishes a production version of the API to vercel
+- `start`: starts the API in watch mode, on `localhost:3000`
+- `deploy`: publishes a production version of the API to vercel
 
 ### Usage
 
 Take the numerical user ID from Goodreads, _e.g._ `139946054` from `https://www.goodreads.com/user/show/139946054-zak`
 
 ```markdown
-### Currently Reading
+#### Currently Reading
 [![Goodreads](https://goodreads-six.vercel.app/goodreads?user=139946054)](https://www.goodreads.com/user/show/139946054-zak)
 ```
 
