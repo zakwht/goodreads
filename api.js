@@ -30,7 +30,8 @@ app.get("/goodreads", async (req, res) => {
       author: "George R. R. Martin",
       progress: "p. 524/3201",
       image: readFileSync(__dirname + "/static/cover.b64"),
-      user: "User"
+      user: "User",
+      dark: req.query.dark
     });
   }
 
@@ -40,7 +41,8 @@ app.get("/goodreads", async (req, res) => {
   res.setHeader("Content-Type", "image/svg+xml");
   if (!parsed.book) return res.render(__dirname + "/template.njk", {
     user: parsed.profile.name,
-    image: readFileSync(__dirname + "/static/logo.b64")
+    image: readFileSync(__dirname + "/static/logo.b64"),
+    dark: req.query.dark
   })
 
   const image = await fetch(parsed.book.image)
@@ -52,7 +54,8 @@ app.get("/goodreads", async (req, res) => {
     author: parsed.book.author,
     image,
     user: parsed.profile.name,
-    progress: getProgress(parsed)
+    progress: getProgress(parsed),
+    dark: req.query.dark
   });
 });
 

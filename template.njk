@@ -34,6 +34,11 @@
           height: 48px;
           margin: auto 0;
         }
+        {% if dark %}
+        span.title, span.page {
+          color: #fff
+        }
+        {% endif %}
       </style>
       <div class="container">
       {% if title %}
