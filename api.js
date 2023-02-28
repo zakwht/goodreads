@@ -1,5 +1,6 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
+const mcache = require("memory-cache")
 const { parse, getProgress } = require("./rss.js");
 const { readFileSync } = require("fs");
 
@@ -10,7 +11,21 @@ nunjucks.configure("", {
   express: app
 });
 
-app.get("/goodreads/json", async (req, res) => {
+const cache = duration => (req, res, next) => {
+  key = `express${req.originalUrl || req.url}`
+  res.setHeader("Content-Type", "image/svg+xml");
+
+  if (mcache.get(key)) return res.send(mcache.get(key))
+  res.sendResponse = res.send
+  res.send = body => {
+    mcache.put(key, body, duration * 60 * 1000)
+    res.setHeader("Content-Type", "image/svg+xml");
+    res.sendResponse(body)
+  }
+  next()
+}
+
+app.get("/goodreads/json", cache(10), async (req, res) => {
   if (!req.query.user) return res.send("No user parameter specified.");
   const parsed = await parse(req.query.user);
   if (parsed.error) {
@@ -20,7 +35,7 @@ app.get("/goodreads/json", async (req, res) => {
   res.json(parsed);
 });
 
-app.get("/goodreads", async (req, res) => {
+app.get("/goodreads", cache(10), async (req, res) => {
   if (!req.query.user) return res.send("No user parameter specified.");
 
   if (req.query.user.replaceAll("o", 2).replaceAll("n", 3) == "j23s32w") {
