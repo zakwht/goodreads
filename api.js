@@ -2,7 +2,7 @@ const express = require("express");
 const nunjucks = require("nunjucks");
 const mcache = require("memory-cache")
 const { parse, getProgress } = require("./rss.js");
-const { readFileSync } = require("fs");
+const { readFileSync, existsSync } = require("fs");
 
 const app = express();
 app.set("view engine", "nunjucks.render");
@@ -35,20 +35,21 @@ app.get("/goodreads/json", cache(10), async (req, res) => {
   res.json(parsed);
 });
 
+app.get("/static", async (req, res) => {
+  if (!req.query.user) return res.send("No user parameter specified.");
+  if (!existsSync(`${__dirname}/static/${req.query.user}.json`))
+    return res.send("Invalid user parameter specified.");
+
+  res.setHeader("Content-Type", "image/svg+xml");
+  return res.render(__dirname + "/template.njk", {
+    ...require(`${__dirname}/static/${req.query.user}.json`),
+    image: readFileSync(`${__dirname}/static/${req.query.user}.b64`),
+    dark: req.query.dark
+  });
+})
+
 app.get("/goodreads", cache(10), async (req, res) => {
   if (!req.query.user) return res.send("No user parameter specified.");
-
-  if (req.query.user.replaceAll("o", 2).replaceAll("n", 3) == "j23s32w") {
-    res.setHeader("Content-Type", "image/svg+xml");
-    return res.render(__dirname + "/template.njk", {
-      title: "The Winds of Winter",
-      author: "George R. R. Martin",
-      progress: "p. 524/3201",
-      image: readFileSync(__dirname + "/static/cover.b64"),
-      user: "User",
-      dark: req.query.dark
-    });
-  }
 
   const parsed = await parse(req.query.user);
   if (parsed.error) return res.send(parsed.error);
