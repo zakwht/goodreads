@@ -29,8 +29,8 @@ Take the numerical user ID from Goodreads, _e.g._ `139946054` from `https://www.
 #### Currently Reading
 <a href="https://www.goodreads.com/user/show/139946054-zak">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://goodreads-six.vercel.app/goodreads?user=jonsnow&dark=true">
-    <img alt="Example" src="https://goodreads-six.vercel.app/goodreads?user=jonsnow">
+    <source media="(prefers-color-scheme: dark)" srcset="https://goodreads-six.vercel.app/static?user=jonsnow&dark=true">
+    <img alt="Example" src="https://goodreads-six.vercel.app/static?user=jonsnow">
   </picture>
 </a>
 
